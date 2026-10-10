@@ -23,6 +23,8 @@ uv pip install --python .venv/bin/python -r requirements.txt
 
 A primeira carga baixa vários GB e demora; os arquivos brutos são apagados depois de agregados e o resultado de cada semestre fica em `data/cache/`. Rodar `etl.py` de novo só baixa os meses recentes (e o que tiver falhado antes), então serve para atualizar os dados.
 
+Os dois agregados e o mapa (`brasil_ufs.geojson`) ficam versionados no repositório, para o dashboard funcionar no Streamlit Community Cloud sem rodar o ETL. Para atualizar o app publicado, rode `etl.py` e faça commit dos arquivos de `data/`.
+
 ## Como ler os números
 
 - O preço médio é a média simples de todas as coletas do recorte, não uma média ponderada por volume vendido.

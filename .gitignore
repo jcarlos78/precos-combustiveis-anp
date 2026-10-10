@@ -1,5 +1,8 @@
 .venv/
-data/
+data/*
+!data/precos_uf.parquet
+!data/precos_municipio.parquet
+!data/brasil_ufs.geojson
 __pycache__/
 .agents/
 .claude/
